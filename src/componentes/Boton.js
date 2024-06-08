@@ -9,7 +9,7 @@ function Boton() {
   
     return (
       <div>
-        <button className='boton' onClick={handleButtonClick}>
+        <button id='button-linkedin' className='boton' onClick={handleButtonClick}>
           Leer más
         </button>
       </div>
