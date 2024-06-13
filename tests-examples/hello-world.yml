@@ -3,7 +3,7 @@ config:
   # Enable the Playwright engine:
   engines:
     playwright: {}
-  processor: "tests/app2.spec.js"
+  processor: "../tests/app2.spec.js"
 scenarios:
   - engine: playwright
     testFunction: "helloFlow"
