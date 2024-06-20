@@ -1,5 +1,6 @@
 import './App.css';
 import Testimonio from './componentes/Testimonio.js';
+import Formulario from './componentes/Formulario.js';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
        testimonio ='La posibilidad de trabajar desde casa, estando presentes en el día a día de nuestros hijos, es un privilegio invaluable. Además, el desarrollo en áreas tan desafiantes como el desarrollo de software, con la posibilidad de vivir de ello, resulta increíblemente gratificante.'
        url = 'https://www.linkedin.com/pulse/mujeres-en-tecnolog%25C3%25ADa-rompiendo-barreras-y-el-futuro-desde-s%25C3%25A1nchez-n6kde/'
        />
+       <Formulario/>
       
 
       </div>
