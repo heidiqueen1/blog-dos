@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import "../hojas-de-estilo/Formulario.css";
 
 const Formulario = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, formState: {errors}, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -19,8 +19,10 @@ const Formulario = () => {
             type="text"
             {...register("nombre", {
               maxLength: 10,
+              required: true
             })}
           ></input>
+          {errors.nombre?.type === 'required' && <p>Este dato es requerido</p>}
         </div>
         <div className="contenedor-formulario">
          <label>Correo</label>
@@ -33,6 +35,8 @@ const Formulario = () => {
               pattern: /\@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
             })}
           ></input>
+          {errors.correo?.type === 'required' && <p>Este dato es requerido</p>}
+          {errors.correo?.type === 'pattern' && <p>Debe tener formato de correo, incluye la @</p>}
         </div>
         <div className="contenedor-formulario">
         <label>Comentario</label>
