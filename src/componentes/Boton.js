@@ -2,9 +2,9 @@ import React from 'react';
 import '../hojas-de-estilo/Boton.css';
 
 
-function Boton() {
+function Boton({url}) {
     const handleButtonClick = () => {
-      window.location.href = 'https://www.linkedin.com/in/heidi-s%C3%A1nchez-qa/';
+      window.location.href = url ;
     };
   
     return (

@@ -16,7 +16,7 @@ function Testimonio(props) {
         <p className='nombre-testimonio'> {props.nombre} </p>
         <p className='cargo-testimonio'> {props.id} </p>
         <p className='texto-testimonio'> {props.testimonio} </p>
-        <Boton/>
+        <Boton url = {props.url} />
         
 
       </div>
