@@ -32,7 +32,7 @@ const Formulario = () => {
             {...register("correo", {
               maxLength: 20,
               required: true,
-              pattern: /\@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              pattern: /@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
             })}
           ></input>
           {errors.correo?.type === 'required' && <p>Este dato es requerido</p>}
