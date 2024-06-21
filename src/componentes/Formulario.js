@@ -7,6 +7,11 @@ const Formulario = () => {
     console.log(data);
   };
 
+  const isValidEmail = (correo) => {
+    const regex = /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(correo);
+  };
+
   return (
     <div>
             <h2>Formulario</h2>     {" "}
@@ -32,11 +37,11 @@ const Formulario = () => {
             {...register("correo", {
               maxLength: 20,
               required: true,
-              pattern: /\@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              validate: isValidEmail,
             })}
           ></input>
           {errors.correo?.type === 'required' && <p>Este dato es requerido</p>}
-          {errors.correo?.type === 'pattern' && <p>Debe tener formato de correo, incluye la @</p>}
+          {errors.correo?.type === 'validate' && <p>Debe tener formato de correo, incluye la @</p>}
         </div>
         <div className="contenedor-formulario">
         <label>Comentario</label>
