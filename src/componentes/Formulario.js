@@ -1,11 +1,14 @@
 import { useForm } from "react-hook-form";
 import "../hojas-de-estilo/Formulario.css";
 
+
 const Formulario = () => {
-  const { register, formState: {errors}, handleSubmit } = useForm();
+  const { register, formState: {errors}, watch, handleSubmit } = useForm({defaultValues : {comentario: "Quiero recibir todos los artículos en mi correo ",}});
   const onSubmit = (data) => {
     console.log(data);
   };
+
+  const incluirTelefono = watch ("incluirTelefono");
 
   const isValidEmail = (correo) => {
     const regex = /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -61,6 +64,19 @@ const Formulario = () => {
             <option value="ot">Otro</option>
           </select>
         </div>
+       
+        <div className="contenedor-formulario">
+        <label>¿Incluir teléfono?</label>
+          <input type="checkbox" {...register("incluirTelefono")} />
+        </div>
+        {incluirTelefono && (
+          <div className="contenedor-formulario">
+            <label>Teléfono</label>
+            <input type="text" {...register("telefono")} />
+          </div>
+        )}
+
+
        <input className="boton" type="submit" value="enviar" />
       </form>
     </div>
