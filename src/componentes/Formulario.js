@@ -5,10 +5,12 @@ import { db } from "../firebase/config";
 
 
 const Formulario = () => {
-  const { register, formState: {errors}, watch, handleSubmit } = useForm({
+  const { register, formState: {errors}, watch, handleSubmit, reset } = useForm({
     defaultValues : {comentario: "Quiero recibir todos los artículos en mi correo ",}});
   const onSubmit = (data) => {
     console.log(data);
+    alert("Datos enviados con exito");
+    reset ();
 
     const dataRef = collection(db, "formulario");
 
@@ -32,6 +34,7 @@ const Formulario = () => {
   return (
     <div>
             <h2>Formulario</h2>     {" "}
+      <h3>Regístrate si deseas recibir los nuevos artículos en tu correo</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
                {" "}
         <div className="contenedor-formulario">
@@ -40,25 +43,25 @@ const Formulario = () => {
             className="input-text"
             type="text"
             {...register("nombre", {
-              maxLength: 10,
+              maxLength: 30,
               required: true
             })}
           ></input>
-          {errors.nombre?.type === 'required' && <p>Este dato es requerido</p>}
+          {errors.nombre?.type === 'required' && <span>Este dato es requerido</span>}
         </div>
         <div className="contenedor-formulario">
          <label>Correo</label>
           <input
             className="input-text"
-            type="text"
+            type="email"
             {...register("correo", {
-              maxLength: 20,
+              maxLength: 30,
               required: true,
               validate: isValidEmail,
             })}
           ></input>
-          {errors.correo?.type === 'required' && <p>Este dato es requerido</p>}
-          {errors.correo?.type === 'validate' && <p>Debe tener formato de correo, incluye la @</p>}
+          {errors.correo?.type === 'required' && <span>Este dato es requerido</span>}
+          {errors.correo?.type === 'validate' && <span>Debe tener formato de correo, incluye la @</span>}
         </div>
         <div className="contenedor-formulario">
         <label>Comentario</label>
