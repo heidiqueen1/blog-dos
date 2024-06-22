@@ -1,11 +1,25 @@
-import { useForm } from "react-hook-form";
-import "../hojas-de-estilo/Formulario.css";
+import { useForm } from "react-hook-form"
+import "../hojas-de-estilo/Formulario.css"
+import { collection, addDoc } from "firebase/firestore"
+import { db } from "../firebase/config";
 
 
 const Formulario = () => {
-  const { register, formState: {errors}, watch, handleSubmit } = useForm({defaultValues : {comentario: "Quiero recibir todos los artículos en mi correo ",}});
+  const { register, formState: {errors}, watch, handleSubmit } = useForm({
+    defaultValues : {comentario: "Quiero recibir todos los artículos en mi correo ",}});
   const onSubmit = (data) => {
     console.log(data);
+
+    const dataRef = collection(db, "formulario");
+
+    addDoc(dataRef, data)
+    .then(() =>{
+      console.log("¡Datos agregados exitosamente!");
+    })
+    .catch((error) => {
+      console.error("Error al agregar datos", error);
+
+    });
   };
 
   const incluirTelefono = watch ("incluirTelefono");
@@ -67,7 +81,9 @@ const Formulario = () => {
        
         <div className="contenedor-formulario">
         <label>¿Incluir teléfono?</label>
-          <input type="checkbox" {...register("incluirTelefono")} />
+          <input type="checkbox" {...register("incluirTelefono",{
+              required: false,
+            })} />
         </div>
         {incluirTelefono && (
           <div className="contenedor-formulario">
