@@ -9,6 +9,7 @@ function Testimonio(props) {
   return (
     <div className='contenedor-testimonio'>
       <img 
+      id = 'imagenid'
       className='imagen-testimonio'
       src={require(`../imagenes/pexels-${props.imagen}.jpg`)}
       alt='Foto de playa'
