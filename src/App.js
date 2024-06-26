@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className='contenedor-principal'> 
-      <h1 className='texto'>Mi blog personal</h1>
+      <h1 className='texto'>El Blog del trabajo remoto</h1>
     
       < Testimonio
        nombre ='Adoptando el trabajo remoto: Mi viaje y consejos para el éxito'
@@ -29,6 +29,14 @@ function App() {
        imagen ='tres'
        testimonio ='La posibilidad de trabajar desde casa, estando presentes en el día a día de nuestros hijos, es un privilegio invaluable. Además, el desarrollo en áreas tan desafiantes como el desarrollo de software, con la posibilidad de vivir de ello, resulta increíblemente gratificante.'
        url = 'https://www.linkedin.com/pulse/mujeres-en-tecnolog%25C3%25ADa-rompiendo-barreras-y-el-futuro-desde-s%25C3%25A1nchez-n6kde/'
+       />
+
+< Testimonio
+       nombre ='¿Cómo puedo crear una carta de presentación de alto impacto?'
+       id = 'N°4'
+       imagen ='cuatro'
+       testimonio ='Una carta de presentación, o cover letter, es un documento formal que acompaña a tu hoja de vida. En ella, tienes la oportunidad de presentar tu mejor argumento sobre por qué eres el candidato ideal para un puesto de trabajo. En escasas 50 líneas, debemos captar la atención del reclutador y ser considerados para pasar al siguiente nivel del proceso.'
+       url = 'https://www.linkedin.com/pulse/c%C3%B3mo-puedo-crear-una-carta-de-presentaci%C3%B3n-alto-impacto-heidi-s%C3%A1nchez-opvje/?trackingId=iJhzz9R%2BQOS1bovl4Y5NJg%3D%3D'
        />
        <Formulario/>
       
