@@ -9,7 +9,7 @@ const Formulario = () => {
     defaultValues : {comentario: "Quiero recibir todos los artículos en mi correo ",}});
   const onSubmit = (data) => {
     console.log(data);
-    alert("Datos enviados con exito");
+    alert("¡Datos agregados exitosamente!");
     reset ();
 
     const dataRef = collection(db, "formulario");
