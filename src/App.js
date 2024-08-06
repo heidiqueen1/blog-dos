@@ -46,22 +46,21 @@ function App() {
           testimonio="Descubrí que el poder de transmutar los sentimientos negativos en positivos es una herramienta invaluable para alcanzar un rendimiento cerebral óptimo. Pero, ¿cómo podemos convertir aquello que nos afecta emocionalmente de forma negativa en algo que nos impulse a crecer?"
           url="https://www.linkedin.com/pulse/c%C3%B3mo-transformar-una-p%C3%A9rdida-en-algo-valioso-venezolanas-globales-azxjf/?trackingId=slIp%2B8QZQKeLWu9ZPrd9LQ%3D%3D"
         />
-         <Testimonio
+        <Testimonio
           titulo="El arte de la productividad, ¿Cómo hacer actividades simultáneas con éxito?"
           subtitulo="N°6"
           imagen="seis"
           testimonio="Ser productivo es una característica imperativa en la modernidad. Nos encontramos en un mundo profesional acelerado que exige adquirir habilidades rápidamente. Debemos partir del autoconocimiento, saber cuál es nuestra forma de aprender más rápido y potenciarla, además de tener claridad en la disposición de tiempo para agendar nuestros momentos de planificación y mejora continua."
           url="https://www.linkedin.com/pulse/el-arte-de-la-productividad-c%C3%B3mo-hacer-actividades-con-heidi-s%C3%A1nchez-ckyse/?trackingId=wndPQi7eOeDIvlnSmZfANw%3D%3D"
         />
-          <Testimonio
+        <Testimonio
           titulo="¿Quieres vivir de escribir y hacerlo en remoto? descubre el Copywriting"
           subtitulo="N°7"
           imagen="siete"
-          testimonio="Un copywriter se dedica a crear textos que persuaden al lector, adaptándose a diferentes estilos como breves, extensos, directos, emocionales o creativos. Estos textos pueden aplicarse en cualquier sección, plataforma o entorno."
+          testimonio="Un Copywriter se dedica a crear textos que persuaden al lector, adaptándose a diferentes estilos como breves, extensos, directos, emocionales o creativos. Estos textos pueden aplicarse en cualquier sección, plataforma o entorno."
           url="https://www.linkedin.com/pulse/quieres-vivir-de-escribir-y-hacerlo-en-remoto-descubre-heidi-s%C3%A1nchez-s4kse/?trackingId=o0FGzWVLS%2B%2BRt%2BeWPbtaCQ%3D%3D"
         />
 
-       
         <Formulario />
       </div>
       <h2>By Heidi Sánchez</h2>s
