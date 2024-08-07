@@ -60,7 +60,7 @@ function App() {
           testimonio="Un Copywriter se dedica a crear textos que persuaden al lector, adaptándose a diferentes estilos como breves, extensos, directos, emocionales o creativos. Estos textos pueden aplicarse en cualquier sección, plataforma o entorno."
           url="https://www.linkedin.com/pulse/quieres-vivir-de-escribir-y-hacerlo-en-remoto-descubre-heidi-s%C3%A1nchez-s4kse/?trackingId=o0FGzWVLS%2B%2BRt%2BeWPbtaCQ%3D%3D"
         />
-        <iframe width='160' height='400' src='https://leanpub.com/TrabajaEnRemotoporHeidiSanchez/embed' frameborder='0' allowtransparency='true'></iframe>
+        <iframe width='160' height='400' title= 'Trabaja-en-remoto' src='https://leanpub.com/TrabajaEnRemotoporHeidiSanchez/embed' frameborder='0' allowtransparency='true'></iframe>
 
         <Formulario />
       </div>
